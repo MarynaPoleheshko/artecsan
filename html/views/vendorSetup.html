@@ -1,0 +1,166 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>7. Vendor Setup</h2>
+        <ol class="breadcrumb">
+            <li>
+                <span class="badge badge-primary vertical-align-bottom">1</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="admin.pos"> POS selection</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">2</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="admin.posDetails"> Account Level</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">3</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.setupProfile"> Owner Profile</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">4</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.restaurantProfile"> Restaurant Profile</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">5</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.paymentProfile"> Payment Profile</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">6</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.userSetup"> User Setup</a>
+                </strong>
+            </li>
+        </ol>
+        <br>
+        <ol class="breadcrumb">
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">7</span><strong class="text-info vertical-align-bottom active-breadcrumb"> Vendor Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">8</span><strong class="text-info vertical-align-bottom"> Inventory Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">9</span><strong class="text-info vertical-align-bottom"> Recipe Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">10</span><strong class="text-info vertical-align-bottom"> Menu Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">11</span><strong class="text-info vertical-align-bottom"> Delivery Schedule</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="wrapper wrapper-content  animated fadeInRight owner-profile">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <h3 class="text-center">Vendor Search</h3>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>Name</label>
+                                <input type="text" class="form-control input-sm m-b-xs" placeholder="Name">
+                            </div>
+                            <div class="col-xs-4">
+                                <label>City</label>
+                                <input type="text" class="form-control input-sm m-b-xs" placeholder="City">
+                            </div>
+                            <div class="col-xs-4">
+                                <label>ZipCode</label>
+                                <input type="text" class="form-control input-sm m-b-xs" placeholder="ZipCode">
+                            </div>
+                            <div class="col-xs-12 text-right padding-top-20"><button class="btn btn-primary">Search</button></div>
+                        </div>
+                        <table class="footable table table-stripped" data-page-size="8">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>City</th>
+                                <th>Date</th>
+                                <th>ZipCode</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="vendor in main.vendorsList">
+                                <td>{{vendor.id}}</td>
+                                <td>{{vendor.name}}</td>
+                                <td>{{vendor.city}}</td>
+                                <td>{{vendor.date}}</td>
+                                <td>{{vendor.zip}}</td>
+                                <td>
+                                    <label class="switch">
+                                        <input type="checkbox" ng-model="vendor.selected"><i></i>
+                                    </label>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="5">
+                                    <ul class="pagination pull-right"></ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                            </div>
+                        <div class="col-lg-12">
+                            <button type="submit" ui-sref="food.inventorySetup" class="btn btn-primary block m-b float-right">Goto Inventory Setup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox ">
+                <div class="ibox-content">
+                    <div class="tab-content">
+                        <div class="tab-pane active">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h2>Selected Vendors</h2>
+                                    <hr/>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="full-height-scroll" full-scroll>
+                                    <table class="table table-stripped">
+                                        <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="vendor in main.vendorsList" >
+                                                <td ng-if="vendor.selected">{{vendor.id}}</td>
+                                                <td ng-if="vendor.selected">{{vendor.name}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

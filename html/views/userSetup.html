@@ -1,0 +1,135 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>6. User Setup</h2>
+        <ol class="breadcrumb">
+            <li>
+                <span class="badge badge-primary vertical-align-bottom">1</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="admin.pos"> POS selection</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">2</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="admin.posDetails"> Account Level</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">3</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.setupProfile"> Owner Profile</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">4</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.restaurantProfile"> Restaurant Profile</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">5</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.paymentProfile"> Payment Profile</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">6</span><strong class="text-info vertical-align-bottom active-breadcrumb"> User Setup</strong>
+            </li>
+        </ol>
+        <br>
+        <ol class="breadcrumb">
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">7</span><strong class="text-info vertical-align-bottom"> Vendor Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">8</span><strong class="text-info vertical-align-bottom"> Inventory Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">9</span><strong class="text-info vertical-align-bottom"> Recipe Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">10</span><strong class="text-info vertical-align-bottom"> Menu Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">11</span><strong class="text-info vertical-align-bottom"> Delivery Schedule</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="wrapper wrapper-content  animated fadeInRight owner-profile">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="text-center">Users</h3>
+                            <button class="btn btn-primary float-right" ng-click="main.open2(main)">Add User Item</button>
+                            <table class="footable table table-stripped" data-page-size="8">
+                                <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Type</th>
+                                    <th></th>
+                                    <th>Active</th>
+                                </tr>
+                                </thead>
+                                <tbody ng-repeat="user in main.usersList">
+                                <tr>
+                                    <td>{{user.firstName}}</td>
+                                    <td>{{user.lastName}}</td>
+                                    <td>{{user.email}}</td>
+                                    <td>{{user.userType}}</td>
+                                    <td class="text-right">
+                                        <button class="btn btn-warning " type="button" ng-click="main.editUser(main,user, $index)"><i class="fa fa-edit"></i>&nbsp;Edit</button>
+                                        <button class="btn btn-danger " type="button"  ng-click="main.deleteUser(main,$index)"><i class="fa fa-times"></i>&nbsp;Delete</button>
+                                    </td>
+                                    <td>
+                                        <label class="switch">
+                                            <input type="checkbox" ng-model="vendor.selected"><i></i>
+                                        </label>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-12">
+                            <button class="btn btn-primary margin-right-10" ui-sref="food.vendorSetup">Next - Vendor Setup</button>
+                            <button class="btn btn-primary" ng-click="main.open3(main)">Invite User & Exit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox ">
+                <div class="ibox-content">
+                    <div class="tab-content">
+                        <div class="tab-pane active">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h4>Helpful Tip</h4>
+                                    <hr/>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="full-height-scroll" full-scroll>
+                                    <strong>Instructions to User</strong>
+                                    <p class="padding-top-5">
+                                        Message
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

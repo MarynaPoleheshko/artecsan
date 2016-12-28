@@ -1,0 +1,192 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>5. Payment Profile</h2>
+        <ol class="breadcrumb">
+            <li>
+                <span class="badge badge-primary vertical-align-bottom">1</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="admin.pos"> POS selection</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">2</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="admin.posDetails"> Account Level</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">3</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.setupProfile"> Owner Profile</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-primary vertical-align-bottom">4</span>
+                <strong class="text-green vertical-align-bottom">
+                    <a ui-sref="profile.restaurantProfile"> Restaurant Profile</a>
+                </strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">5</span><strong class="text-info vertical-align-bottom active-breadcrumb"> Payment Profile</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">6</span><strong class="text-info vertical-align-bottom"> User Setup</strong>
+            </li>
+        </ol>
+        <br>
+        <ol class="breadcrumb">
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">7</span><strong class="text-info vertical-align-bottom"> Vendor Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">8</span><strong class="text-info vertical-align-bottom"> Inventory Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">9</span><strong class="text-info vertical-align-bottom"> Recipe Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">10</span><strong class="text-info vertical-align-bottom"> Menu Setup</strong>
+            </li>
+            <li class="active">
+                <span class="badge badge-info vertical-align-bottom">11</span><strong class="text-info vertical-align-bottom"> Delivery Schedule</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="wrapper wrapper-content  animated fadeInRight owner-profile">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="text-center">Payment Details</h3>
+                            <img class="img-responsive float-right" src="img/png/accepted_cards.png"/>
+                            <form id="payment-form" class="m-t">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="cardNumber">
+                                                Card number
+                                            </label>
+                                            <div class="input-group">
+                                                <input class="form-control" type="tel" placeholder="Valid Card Number" id="cardNumber">
+                                                <div class="input-group-addon">
+                                                    <span>
+                                                        <i class="fa fa-credit-card"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="cardExpiry">
+                                                <span>Expiration Date</span>
+                                            </label>
+                                            <div>
+                                                <input class="form-control width-20" maxlength="2" type="number" placeholder="MM" id="cardExpiry">
+                                           <span class="float-left date-payment-label">/</span>
+                                                <input class="form-control width-20" maxlength="2" type="number" placeholder="YY" id="cardExpiry2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 pull-right">
+                                        <div class="form-group">
+                                            <label for="cardCVC">
+                                               CV Code
+                                            </label>
+                                            <input class="form-control" type="tel"  placeholder="CVC" id="cardCVC">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="couponCode">
+                                                Coupon Code
+                                            </label>
+                                            <input class="form-control" type="text" id="couponCode" placeholder="Coupon Code">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="zipCode">
+                                                Zip Code
+                                            </label>
+                                            <input class="form-control" type="text" id="zipCode" placeholder="ZIP Code">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="firstName">
+                                                First Name
+                                            </label>
+                                            <input class="form-control" type="text" id="firstName" placeholder="First Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="lastName">
+                                                Last Name
+                                            </label>
+                                            <input class="form-control" type="text" id="lastName" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="billingAddress">
+                                                Billing Address
+                                            </label>
+                                            <input class="form-control" type="text" id="billingAddress" placeholder="Billing Address">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button type="submit" ui-sref="profile.userSetup" class="btn btn-primary block float-right m-b">Start Subscription and Begin User Setup</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox ">
+                <div class="ibox-content">
+                    <div class="tab-content">
+                        <div class="tab-pane active">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h4>Helpful Tip</h4>
+                                    <hr/>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="full-height-scroll" full-scroll>
+                                    <strong>Payment Profile Instructions</strong>
+                                    <p class="padding-top-5">
+                                        Message to restaurant user: Keep in mind that your first 14-days are free. The system needs at least 7- days of data and this process cannot start until your setup is complete. So the sooner you get setup, the sooner Artecsan can begin.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

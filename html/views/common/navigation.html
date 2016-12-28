@@ -1,0 +1,37 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+           <!-- <li class="nav-header">
+
+            </li>-->
+            <li ui-sref-active="active">
+                <a ui-sref="admin.home"><i class="fa fa-diamond"></i> <span class="nav-label">{{ 'Home' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isRestaurantSelected">
+                <a ui-sref="admin.management"><i class="fa fa-edit"></i> <span class="nav-label">{{ 'Management' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isRestaurantSelected">
+                <a ui-sref="admin.inventory"><i class="fa fa-desktop"></i> <span class="nav-label">{{ 'Inventory' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isRestaurantSelected">
+                <a ui-sref="admin.reviews"><i class="fa fa-envelope"></i> <span class="nav-label">{{ 'Consumer Reviews' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isRestaurantSelected">
+                <a ui-sref="admin.performance"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">{{ 'Performance Score' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isRestaurantSelected">
+                <a ui-sref="admin.reports"><i class="fa fa-pie-chart"></i> <span class="nav-label">{{ 'Reports' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isRestaurantSelected">
+                <a ui-sref="admin.administrator"><i class="fa fa-globe"></i> <span class="nav-label">{{ 'Administrator' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isRestaurantSelected">
+                <a ui-sref="admin.frequent"><i class="fa fa-flask"></i> <span class="nav-label">{{ 'Frequent Q&A' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="logins"><i class="fa fa-sign-out" ng-click="main.logout()"></i> <span class="nav-label">{{ 'Logout' | translate }}</span> </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
