@@ -343,3 +343,74 @@ body.login-page {
 .width-100{
     width:100px;
 }
+
+.padding-left-5{
+    padding-left:5px;
+}
+
+.padding-right-5{
+    padding-right:5px;
+}
+
+.padding-right-10{
+    padding-right:10px;
+}
+
+.navbar-brand-xs {
+    padding: 15px 10px;
+}
+
+.margin-right-10{
+    margin-right:10px;
+}
+
+.minimalize-styl-2 {
+   padding: 6px 12px;;
+    margin: 10px 20px 5px 0px;
+    font-size: 14px;
+    float: left;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-button-xs {
+        display: none;
+    }
+}
+
+.min-width-115{
+    min-width: 115px;
+}
+.min-width-150{
+    min-width: 150px;
+}
+
+.width-60{
+    width: 60px;
+}
+
+.width-90{
+    width:90px;
+}
+
+.width-70{
+    width:70px;
+}
+
+.text-bold-total{
+    font-weight: 600;
+    border-top: 2px solid rgba(153, 153, 153, 0.41);
+}
+
+.min-width-90{
+    min-width:90px;
+}
+
+.border-bottom-td{
+    border-bottom: 2px solid rgba(153, 153, 153, 0.41)!important;
+}

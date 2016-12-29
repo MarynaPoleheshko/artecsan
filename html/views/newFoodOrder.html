@@ -8,36 +8,62 @@
 </div>
 <div class="wrapper wrapper-content  animated fadeInRight">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-8">
             <div class="ibox float-e-margins">
-                <div class="ibox-content overflow-x-auto">
-
-                    <table class="table table-bordered">
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
                         <thead class="th-text-center">
                         <tr>
-                            <th>Vendor</th>
-                            <th>Item Description</th>
-                            <th>Suggested Order</th>
-                            <th>Suggested Order Type</th>
-                            <th>Actual Order</th>
-                            <th>Actual Order Type</th>
-                            <th>Item Cost</th>
-                            <th>Total Order Cost</th>
-                            <th>(+/-) Suggested Order</th>
-                            <th>Approve</th>
+                            <th></th>
+                            <th></th>
+                            <th colspan="2">Suggested</th>
+                            <th colspan="2">Actual</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th class="min-width-115">Vendor</th>
+                            <th class="min-width-150">Item Description</th>
+                            <th class="width-60 text-center">Order</th>
+                            <th class="width-80">Order Type</th>
+                            <th class="min-width-90">Order</th>
+                            <th class="min-width-115">Order Type</th>
+                            <th class="width-90 text-center">Item Cost</th>
+                            <th class="width-90 text-center">Total Order Cost</th>
+                            <th class="width-90 text-center">(+/-) Suggested Order</th>
+                            <th class="width-70">Approve</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Sysco</td>
-                            <td>Chicken Breast</td>
-                            <td>6</td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Sysco">Sysco</option>
+                                    <option value="Vendor">Vendor</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Chicken Breast">Chicken Breast</option>
+                                    <option value="Beef Patties">Beef Patties</option>
+                                    <option value="Flour">Flour</option>
+                                </select>
+                            </td>
+                            <td class="text-center">6</td>
                             <td>Case</td>
-                            <td>6</td>
-                            <td>Case</td>
-                            <td>$1.25</td>
-                            <td>$957.00</td>
-                            <td>0</td>
+                            <td><input class="form-control" value="6"></td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Case">Case</option>
+                                    <option value="Unit">Unit</option>
+                                </select>
+                            </td>
+                            <td class="text-center">$1.25</td>
+                            <td class="text-center">$957.00</td>
+                            <td class="text-center">0</td>
                             <td>
                                 <label class="switch">
                                     <input type="checkbox"><i></i>
@@ -45,15 +71,31 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Sysco</td>
-                            <td>Beef Patties</td>
-                            <td>2</td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Sysco">Sysco</option>
+                                    <option value="Vendor">Vendor</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Chicken Breast">Chicken Breast</option>
+                                    <option value="Beef Patties">Beef Patties</option>
+                                    <option value="Flour">Flour</option>
+                                </select>
+                            </td>
+                            <td class="text-center">2</td>
                             <td>Case</td>
-                            <td>4</td>
-                            <td>Case</td>
-                            <td>$0.10</td>
-                            <td>$225.00</td>
-                            <td>2</td>
+                            <td><input class="form-control" value="4"></td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Case">Case</option>
+                                    <option value="Unit">Unit</option>
+                                </select>
+                            </td>
+                            <td class="text-center">$0.10</td>
+                            <td class="text-center">$225.00</td>
+                            <td class="text-center">2</td>
                             <td>
                                 <label class="switch">
                                     <input type="checkbox"><i></i>
@@ -61,22 +103,38 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Sysco</td>
-                            <td>Flour</td>
-                            <td>36</td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Sysco">Sysco</option>
+                                    <option value="Vendor">Vendor</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Chicken Breast">Chicken Breast</option>
+                                    <option value="Beef Patties">Beef Patties</option>
+                                    <option value="Flour">Flour</option>
+                                </select>
+                            </td>
+                            <td class="text-center">36</td>
                             <td>Unit</td>
-                            <td>24</td>
-                            <td>Unit</td>
-                            <td>$1.25</td>
-                            <td>$76.00</td>
-                            <td>-12</td>
+                            <td><input class="form-control" value="24"></td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="Case">Case</option>
+                                    <option value="Unit">Unit</option>
+                                </select>
+                            </td>
+                            <td class="text-center">$1.25</td>
+                            <td class="text-center">$76.00</td>
+                            <td class="text-center">-12</td>
                             <td>
                                 <label class="switch">
                                     <input type="checkbox"><i></i>
                                 </label>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="text-bold-total">
                             <td></td>
                             <td></td>
                             <td>TOTAL</td>
@@ -90,10 +148,39 @@
                         </tr>
                         </tbody>
                     </table>
-
+                    </div>
                     <div class="row">
-                        <div class="col-md-12 text-right">
+                        <div class="col-xs-6 padding-20">
+                            <button class="btn btn-primary">Confirm and Save</button>
+                        </div>
+                        <div class="col-xs-6 text-right padding-20">
                             <button class="btn btn-info"><i class="glyphicon glyphicon-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox ">
+                <div class="ibox-content">
+                    <div class="tab-content">
+                        <div class="tab-pane active">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h4>Helpful Tip</h4>
+                                    <hr/>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="full-height-scroll" full-scroll>
+                                    <strong>Notes</strong>
+                                    <p class="padding-top-5">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
