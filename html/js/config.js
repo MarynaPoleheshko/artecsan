@@ -251,7 +251,21 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('food.inventoryPurchases', {
             url: "/inventory_purchases",
             templateUrl: "views/inventoryPurchases.html",
-            data: { pageTitle: 'Inventory Purchases'}
+            data: { pageTitle: 'Inventory Purchases'},
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['js/plugins/moment/moment.min.js']
+                        },
+                        {
+                            name: 'datePicker',
+                            files: ['css/plugins/datapicker/angular-datapicker.css','js/plugins/datapicker/angular-datepicker.js']
+                        }
+
+                    ]);
+                }
+            }
         })
         .state('food.costOfSales', {
             url: "/cost_of_sales",

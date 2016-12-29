@@ -414,3 +414,7 @@ body.login-page {
 .border-bottom-td{
     border-bottom: 2px solid rgba(153, 153, 153, 0.41)!important;
 }
+
+.active-page{
+    font-weight: 600;
+}

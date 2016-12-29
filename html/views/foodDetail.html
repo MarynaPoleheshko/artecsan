@@ -1,6 +1,14 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
         <h2>Food Detail Report</h2>
+        <ol class="breadcrumb">
+            <li ui-sref="admin.dashboardSubCategories">
+                <a>Reports</a>
+            </li>&nbsp;/&nbsp;
+            <li class="active-page">
+                <a>Food Detail Report</a>
+            </li>
+        </ol>
     </div>
     <div class="col-lg-2">
 
@@ -11,6 +19,11 @@
         <div class="col-sm-8">
             <div class="ibox float-e-margins">
                 <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary"  onclick="window.history.go(-1); return false;">&lt;&lt; Back</button>
+                        </div>
+                    </div>
                    <div class="row">
                        <div class="col-sm-12 col-md-6 col-lg-4" ui-sref="food.inventoryUsage">
                            <div class="widget style1 lazur-bg">
