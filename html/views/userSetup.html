@@ -76,8 +76,8 @@
                                     <th>Last Name</th>
                                     <th>Email</th>
                                     <th>Type</th>
-                                    <th data-sort-ignore="true"></th>
-                                    <th data-sort-ignore="true">Active</th>
+                                    <th class="width-70" data-sort-ignore="true">Active</th>
+                                    <th class="width-180" data-sort-ignore="true"></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -86,14 +86,14 @@
                                     <td>{{user.lastName}}</td>
                                     <td>{{user.email}}</td>
                                     <td>{{user.userType}}</td>
-                                    <td class="text-right">
-                                        <button class="btn btn-warning " type="button" ng-click="main.editUser(main,user, $index)"><i class="fa fa-edit"></i>&nbsp;Edit</button>
-                                        <button class="btn btn-danger " type="button"  ng-click="main.deleteUser(main,$index)"><i class="fa fa-times"></i>&nbsp;Delete</button>
-                                    </td>
                                     <td>
                                         <label class="switch">
                                             <input type="checkbox" ng-model="vendor.selected"><i></i>
                                         </label>
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-warning " type="button" ng-click="main.editUser(main,user, $index)"><i class="fa fa-edit"></i>&nbsp;Edit</button>
+                                        <button class="btn btn-danger " type="button"  ng-click="main.deleteUser(main,$index)"><i class="fa fa-times"></i>&nbsp;Delete</button>
                                     </td>
                                 </tr>
                                 </tbody>
