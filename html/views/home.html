@@ -8,7 +8,7 @@
 </div>
 <div class="wrapper wrapper-content  animated fadeInRight">
     <div class="row">
-        <div ng-if="!main.isRestaurantSelected" class="col-sm-8">
+        <div class="col-sm-8">
             <div class="ibox float-e-margins">
                 <div class="ibox-content">
                     <div class="row">
@@ -22,7 +22,7 @@
                             <th>#</th>
                             <th>Restaurant Name</th>
                             <th>Address</th>
-                            <th class="center">Action</th>
+                            <th data-sort-ignore="true" class="center">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -30,55 +30,55 @@
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
                         <tr class="gradeC">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
                         <tr class="gradeX">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
                         <tr class="gradeC">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
                         <tr class="gradeX">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
                         <tr class="gradeC">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
                         <tr class="gradeX">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
                         <tr class="gradeC">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
                         <tr class="gradeX">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
                         </tr>
 
                         </tbody>
@@ -90,85 +90,6 @@
                         </tr>
                         </tfoot>
                     </table>
-                </div>
-            </div>
-        </div>
-        <div ng-if="main.isRestaurantSelected && ! main.changeFirstDashboaed" class="col-sm-8">
-            <div class="ibox float-e-margins">
-                <div class="ibox-content">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title" >Management</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title" >Inventory</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title" >Consumer Reviews</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title" >Performance Score</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title" >Dashboard & Reports</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4" ng-click="main.administratorSelected = true; main.changeFirstDashboaed = true;">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title">Administrator</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div ng-if="main.isRestaurantSelected && main.changeFirstDashboaed" class="col-sm-8">
-            <div class="ibox float-e-margins">
-                <div class="ibox-content">
-                    <div class="row">
-                        <div ui-sref="admin.pos" class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title">Create New User</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title" >Delete/Modify Users</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="widget style1 lazur-bg">
-                                <div class="text-center home-element">
-                                    <a class="pos-title" >Billing</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

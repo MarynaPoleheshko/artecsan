@@ -6,12 +6,6 @@
     font-size: 16px;
 }
 
-.pos-element{
-    padding-top: 35px;
-    padding-bottom: 35px;
-    font-size: 20px;
-}
-
 .pos-title{
     color:white;
 }
@@ -214,4 +208,135 @@
 
 .margin-0-auto{
     margin:0 auto;
+}
+
+.max-180{
+    max-width: 180px;
+    width: 180px;
+}
+
+.width-80{
+    width:80px;
+}
+
+.width-150{
+    width: 150px;
+}
+
+.padding-right-30{
+    padding-right:30px;
+}
+
+.form-horizontal .form-group {
+     margin-right: 0px;
+    margin-left: 0px;
+}
+
+.margin-left-4{
+    margin-left:4px;
+}
+
+.font-14{
+    font-size: 14px;
+}
+
+.pos-sync-element {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.button-element,
+.pos-element{
+    font-size: 18px;
+    position: relative;
+    height: 120px;
+}
+.button-element a,
+.pos-element a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    width: 100%;
+    margin: auto;
+}
+
+.overflow-x-auto{
+    overflow-x: auto;
+}
+
+.th-text-center th{
+    text-align: center;
+}
+
+.performance-table-color{
+    background-color: #F5F5F6;
+}
+
+.width-200{
+    width: 200px;
+}
+
+.search-button{
+    padding-top: 23px;
+    text-align: right;
+    padding-bottom:20px;
+}
+
+.width-50{
+    width: 50px;
+}
+
+.admin-login {
+    color: #fff;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 50px;
+}
+.admin-login p.welcome {
+    font-size: 36px;
+    font-family: Montserrat-Bold,sans-serif;
+    margin: 80px 0;
+    /*font-weight: 700;*/
+}
+.admin-login p.info {
+    font-size: 12px;
+    font-family: "Montserrat Light",sans-serif;
+}
+
+.login-footer {
+    padding: 15px;
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    max-width: 960px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #fff;
+    margin: 0 auto -50px;
+}
+.relative {
+    position: relative;
+}
+
+body.login-page {
+    background: url('../img/png/BG_blurred.jpg') center no-repeat fixed rgba(55,188,139,.7);
+    background-size: cover;
+}
+
+.logo{
+    font-size: 34px;
+    margin: 60px auto 0;
+    max-width: 361px;
+    height: 120px;
+    width: 100%;
+    background-size: 100% auto;
+    font-weight: 900;
+    padding-bottom: 20px;
 }

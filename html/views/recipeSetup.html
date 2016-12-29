@@ -1,6 +1,6 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>6. User Setup</h2>
+        <h2>9. Recipe Setup</h2>
         <ol class="breadcrumb">
             <li>
                 <span class="badge badge-primary vertical-align-bottom">1</span>
@@ -33,19 +33,28 @@
                 </strong>
             </li>
             <li class="active">
-                <span class="badge badge-info vertical-align-bottom">6</span><strong class="text-info vertical-align-bottom active-breadcrumb margin-left-4">User Setup</strong>
+                <span class="badge badge-primary vertical-align-bottom">6</span>
+                <strong class="text-green vertical-align-bottom margin-left-4">
+                    <a ui-sref="profile.userSetup">User Setup</a>
+                </strong>
             </li>
         </ol>
         <br>
         <ol class="breadcrumb">
             <li class="active">
-                <span class="badge badge-info vertical-align-bottom">7</span><strong class="text-info vertical-align-bottom margin-left-4">Vendor Setup</strong>
+                <span class="badge badge-primary vertical-align-bottom">7</span>
+                <strong class="text-green vertical-align-bottom margin-left-4">
+                    <a ui-sref="food.vendorSetup">Vendor Setup</a>
+                </strong>
             </li>
             <li class="active">
-                <span class="badge badge-info vertical-align-bottom">8</span><strong class="text-info vertical-align-bottom margin-left-4">Inventory Setup</strong>
+                <span class="badge badge-primary vertical-align-bottom">8</span>
+                <strong class="text-green vertical-align-bottom margin-left-4">
+                    <a ui-sref="food.vendorSetup">Inventory Setup</a>
+                </strong>
             </li>
             <li class="active">
-                <span class="badge badge-info vertical-align-bottom">9</span><strong class="text-info vertical-align-bottom margin-left-4">Recipe Setup</strong>
+                <span class="badge badge-info vertical-align-bottom">9</span><strong class="text-info vertical-align-bottom active-breadcrumb margin-left-4">Recipe Setup</strong>
             </li>
             <li class="active">
                 <span class="badge badge-info vertical-align-bottom">10</span><strong class="text-info vertical-align-bottom margin-left-4">Menu Setup</strong>
@@ -67,41 +76,32 @@
                 <div class="ibox-content">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h3 class="text-center">Users</h3>
-                            <button class="btn btn-primary float-right" ng-click="main.open2(main)">Add User Item</button>
+                            <h3 class="text-center">Recipes</h3>
+                            <button class="btn btn-primary float-right" ng-click="main.open4(main)">Add Recipe</button>
                             <table class="table table-stripped" data-page-size="8">
                                 <thead>
                                 <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
+                                    <th>Recipe Name</th>
                                     <th>Type</th>
-                                    <th data-sort-ignore="true"></th>
-                                    <th data-sort-ignore="true">Active</th>
+                                    <th>Number of Ingredients</th>
+                                    <th class="max-180"></th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr  ng-repeat="user in main.usersList">
-                                    <td>{{user.firstName}}</td>
-                                    <td>{{user.lastName}}</td>
-                                    <td>{{user.email}}</td>
-                                    <td>{{user.userType}}</td>
+                                <tr ng-repeat="recipe in main.recipeList">
+                                    <td>{{recipe.name}}</td>
+                                    <td>{{recipe.type}}</td>
+                                    <td>{{recipe.cnt}}</td>
                                     <td class="text-right">
-                                        <button class="btn btn-warning " type="button" ng-click="main.editUser(main,user, $index)"><i class="fa fa-edit"></i>&nbsp;Edit</button>
-                                        <button class="btn btn-danger " type="button"  ng-click="main.deleteUser(main,$index)"><i class="fa fa-times"></i>&nbsp;Delete</button>
-                                    </td>
-                                    <td>
-                                        <label class="switch">
-                                            <input type="checkbox" ng-model="vendor.selected"><i></i>
-                                        </label>
+                                        <button class="btn btn-warning " type="button" ng-click="main.open5(main)"><i class="fa fa-edit"></i>&nbsp;Edit</button>
+                                        <button class="btn btn-danger " type="button"><i class="fa fa-times"></i>&nbsp;Delete</button>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="col-lg-12">
-                            <button class="btn btn-primary margin-right-10" ui-sref="food.vendorSetup">Next - Vendor Setup</button>
-                            <button class="btn btn-primary" ng-click="main.open3(main)">Invite User & Exit</button>
+                            <button class="btn btn-primary margin-right-10 float-right" ui-sref="food.menuSetup">Next - Menu Setup</button>
                         </div>
                     </div>
                 </div>
@@ -120,9 +120,9 @@
                             </div>
                             <div class="">
                                 <div class="full-height-scroll" full-scroll>
-                                    <strong>Instructions to User</strong>
+                                    <strong>Recipe Setup Instructions</strong>
                                     <p class="padding-top-5">
-                                        Message
+                                        Instructions for restaurant user: Please enter the recipe for all items that are apart of your customer's menu including items prepared in large batches. And remember to include every detail with your recipe including oil & vinegar, down to a pinch of salt. After your recipes are created the next step will be attaching each recipe to your actual customer's menu.
                                     </p>
                                 </div>
                             </div>
