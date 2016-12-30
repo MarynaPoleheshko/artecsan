@@ -184,6 +184,16 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             templateUrl: "views/vendorSetup.html",
             data: { pageTitle: 'Vendor Setup'}
         })
+        .state('food.agreement', {
+            url: "/agreement",
+            templateUrl: "views/agreement.html",
+            data: { pageTitle: 'Agreement'}
+        })
+        .state('food.setupConfirmation', {
+            url: "/setup_confirmation",
+            templateUrl: "views/setupConfirmation.html",
+            data: { pageTitle: 'Setup Confirmation'}
+        })
         .state('food.inventorySetup', {
             url: "/inventory_setup",
             templateUrl: "views/inventorySetup.html",
@@ -285,6 +295,16 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                     ]);
                 }
             }
+        })
+        .state('user', {
+            abstract: true,
+            url: "/user",
+            templateUrl: "views/common/content-new-user.html",
+        })
+        .state('user.createAccount', {
+            url: "/create_Account",
+            templateUrl: "views/ownerProfileSetup.html",
+            data: { pageTitle: 'Profile'}
         })
 }
 angular

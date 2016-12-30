@@ -1,144 +1,109 @@
     <div class="gray-bg">
         <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-10">
-                <h2>2. Accoun Level</h2>
-                <ol class="breadcrumb">
-                    <li>
-                        <span class="badge badge-primary vertical-align-bottom">1</span>
-                        <strong class="text-green vertical-align-bottom margin-left-4">
-                            <a ui-sref="admin.pos">POS selection</a>
-                        </strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">2</span><strong class="text-info vertical-align-bottom active-breadcrumb margin-left-4">Account Level</strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">3</span><strong class="text-info vertical-align-bottom margin-left-4">Owner Profile</strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">4</span><strong class="text-info vertical-align-bottom margin-left-4">Restaurant Profile</strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">5</span><strong class="text-info vertical-align-bottom margin-left-4">Payment Profile</strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">6</span><strong class="text-info vertical-align-bottom margin-left-4">User Setup</strong>
-                    </li>
-                </ol>
-                <br>
-                <ol class="breadcrumb">
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">7</span><strong class="text-info vertical-align-bottom margin-left-4">Vendor Setup</strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">8</span><strong class="text-info vertical-align-bottom margin-left-4">Inventory Setup</strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">9</span><strong class="text-info vertical-align-bottom margin-left-4">Recipe Setup</strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">10</span><strong class="text-info vertical-align-bottom margin-left-4">Menu Setup</strong>
-                    </li>
-                    <li class="active">
-                        <span class="badge badge-info vertical-align-bottom">11</span><strong class="text-info vertical-align-bottom margin-left-4">Delivery Schedule</strong>
-                    </li>
-                </ol>
-            </div>
-            <div class="col-lg-2">
-
+            <div class="col-lg-12">
+                <h2>Account Level</h2>
             </div>
         </div>
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-click="main.selectBlock(1)">
-                    <div class="ibox">
-                        <div class="ibox-content product-box">
+                <div class="col-xs-12">
+                    <button class="btn btn-primary"  onclick="window.history.go(-1); return false;">&lt;&lt; Back</button>
+                </div>
+            </div>
+            <div class="row padding-top-20">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-click="main.selectBlock(1)">
+                        <div class="ibox">
+                            <div class="ibox-content product-box">
 
-                            <div class="product-imitation" ng-class="{'product-color' : main.posIndex == 1}">
-                                <div class="top-title">
-                                    <p>Bar Alcohol Subscription Only</p>
+                                <div class="product-imitation" ng-class="{'product-color' : main.posIndex == 1}">
+                                    <div class="top-title">
+                                        <p>Bar & Nightclub <br> Alcohol Based Analysis</p>
+                                    </div>
+                                    <span class="price-big">$149</span> <span class="color-black"> / month</span>
+                                    <p>($1548 / year)</p>
                                 </div>
-                                <span class="price-big">$149</span> <span class="color-black"> / month</span>
-                                <p>($1548 / year)</p>
-                            </div>
-                            <div class="product-desc">
-                                <p class="text-pos-description color-black">Unlimited Users</p>
-                                <p class="text-pos-description color-black">14-days free</p>
-                                <p class="text-pos-description color-black">Month to month</p>
-                                <p class="text-pos-description color-black">No cancelation fee</p>
-                            </div>
-                            <div class="text-center padding-20">
-                                <button class="btn" ui-sref="profile.setupProfile" ng-class="{'btn-primary' : main.posIndex == 1, 'btn-default' :  main.posIndex != 1}" type="button">Sign up</button>
+                                <div class="product-desc">
+                                    <p class="text-pos-description color-black">Unlimited Users</p>
+                                    <p class="text-pos-description color-black">14-days free</p>
+                                    <p class="text-pos-description color-black">Month to month</p>
+                                    <p class="text-pos-description color-black">No cancelation fee</p>
+                                </div>
+                                <div class="text-center padding-20">
+                                    <button class="btn" ui-sref="profile.setupProfile" ng-class="{'btn-primary' : main.posIndex == 1, 'btn-default' :  main.posIndex != 1}" type="button">Sign up</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-click="main.selectBlock(2)">
-                    <div class="ibox">
-                        <div class="ibox-content product-box">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-click="main.selectBlock(2)">
+                        <div class="ibox">
+                            <div class="ibox-content product-box">
 
-                            <div class="product-imitation" ng-class="{'product-color' : main.posIndex == 2}">
-                                <div class="top-title">
-                                    <p>Family Style - Food Only <br>(no alcohol)</p>
+                                <div class="product-imitation" ng-class="{'product-color' : main.posIndex == 2}">
+                                    <div class="top-title">
+                                        <p>Limited Service <br>Food Based Analysis</p>
+                                    </div>
+                                    <span class="price-big">$249</span> <span class="color-black"> / month</span>
+                                    <p>($2748 / year)</p>
                                 </div>
-                                <span class="price-big">$249</span> <span class="color-black"> / month</span>
-                                <p>($2748 / year)</p>
-                            </div>
-                            <div class="product-desc">
-                                <p class="text-pos-description color-black">Unlimited Users</p>
-                                <p class="text-pos-description color-black">14-days free</p>
-                                <p class="text-pos-description color-black">Month to month</p>
-                                <p class="text-pos-description color-black">No cancelation fee</p>
-                            </div>
-                            <div class="text-center padding-20">
-                                <button class="btn"  ui-sref="profile.setupProfile" ng-class="{'btn-primary' : main.posIndex == 2, 'btn-default' :  main.posIndex != 2}" type="button">Sign up</button>
+                                <div class="product-desc">
+                                    <p class="text-pos-description color-black">Unlimited Users</p>
+                                    <p class="text-pos-description color-black">14-days free</p>
+                                    <p class="text-pos-description color-black">Month to month</p>
+                                    <p class="text-pos-description color-black">No cancelation fee</p>
+                                </div>
+                                <div class="text-center padding-20">
+                                    <button class="btn"  ui-sref="profile.setupProfile" ng-class="{'btn-primary' : main.posIndex == 2, 'btn-default' :  main.posIndex != 2}" type="button">Sign up</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-click="main.selectBlock(3)">
-                    <div class="ibox">
-                        <div class="ibox-content product-box">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-click="main.selectBlock(3)">
+                        <div class="ibox">
+                            <div class="ibox-content product-box">
 
-                            <div class="product-imitation" ng-class="{'product-color' : main.posIndex == 3}">
-                                <div class="top-title">
-                                    <p>Full Service - Food & Alcohol</p>
+                                <div class="product-imitation" ng-class="{'product-color' : main.posIndex == 3}">
+                                    <div class="top-title">
+                                        <p>Full Service <br>Food/Alcohol Analysis</p>
+                                    </div>
+                                    <span class="price-big">$349</span> <span class="color-black"> / month</span>
+                                    <p>($3948 / year)</p>
                                 </div>
-                                <span class="price-big">$349</span> <span class="color-black"> / month</span>
-                                <p>($3948 / year)</p>
-                            </div>
-                            <div class="product-desc">
-                                <p class="text-pos-description color-black">Unlimited Users</p>
-                                <p class="text-pos-description color-black">14-days free</p>
-                                <p class="text-pos-description color-black">Month to month</p>
-                                <p class="text-pos-description color-black">No cancelation fee</p>
-                            </div>
-                            <div class="text-center padding-20">
-                                <button class="btn"  ui-sref="profile.setupProfile" ng-class="{'btn-primary' : main.posIndex == 3, 'btn-default' :  main.posIndex != 3}" type="button">Sign up</button>
+                                <div class="product-desc">
+                                    <p class="text-pos-description color-black">Unlimited Users</p>
+                                    <p class="text-pos-description color-black">14-days free</p>
+                                    <p class="text-pos-description color-black">Month to month</p>
+                                    <p class="text-pos-description color-black">No cancelation fee</p>
+                                </div>
+                                <div class="text-center padding-20">
+                                    <button class="btn"  ui-sref="profile.setupProfile" ng-class="{'btn-primary' : main.posIndex == 3, 'btn-default' :  main.posIndex != 3}" type="button">Sign up</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-click="main.selectBlock(4)">
-                    <div class="ibox">
-                        <div class="ibox-content product-box">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-click="main.selectBlock(4)">
+                        <div class="ibox">
+                            <div class="ibox-content product-box">
 
-                            <div class="product-imitation" ng-class="{'product-color' : main.posIndex == 4}">
-                                <div class="top-title">
-                                    <p>5+ Locations</p>
+                                <div class="product-imitation" ng-class="{'product-color' : main.posIndex == 4}">
+                                    <div class="top-title">
+                                        <p>Enterprise <br> 5+ Locations</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="color-black">Contact Sales/Support</p>
+                                        <p class="color-black">Phone: <a href="tel:800-000-0000">800-000-0000</a> </p>
+                                        <p class="color-black">Email: <a href="mailto:support@skrible.com">sales@skrible.co</a></p>
+                                        <p class="color-black">M-F 8am - 8pm CST</p>
+                                    </div>
                                 </div>
-                                <span class="price-big">Contact Us!</span>
-                            </div>
-                            <div class="product-desc">
+                                <div class="product-desc">
 
-
-                            </div>
-                            <div class="text-center padding-20" ng-click="main.reset()">
-                                <button class="btn" ng-controller="notifyCtrl" ng-class="{'btn-primary' : main.posIndex == 4, 'btn-default' :  main.posIndex != 4}" ng-click="inspiniaDemo1()" type="button">Contact us</button>
+                                </div>
+                                <div class="text-center padding-20" ng-click="main.reset()">
+                                    <button class="btn" ng-controller="notifyCtrl" ng-class="{'btn-primary' : main.posIndex == 4, 'btn-default' :  main.posIndex != 4}" ng-click="inspiniaDemo1()" type="button">Contact us</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
           <!--  <section id="pricing" class="pricing">
                 <div class="container">

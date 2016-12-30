@@ -1,69 +1,19 @@
 <div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2>5. Payment Profile</h2>
-        <ol class="breadcrumb">
-            <li>
-                <span class="badge badge-primary vertical-align-bottom">1</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="admin.pos">POS selection</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">2</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="admin.posDetails">Account Level</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">3</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="profile.setupProfile">Owner Profile</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">4</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="profile.restaurantProfile">Restaurant Profile</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">5</span><strong class="text-info vertical-align-bottom active-breadcrumb margin-left-4">Payment Profile</strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">6</span><strong class="text-info vertical-align-bottom margin-left-4">User Setup</strong>
-            </li>
-        </ol>
-        <br>
-        <ol class="breadcrumb">
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">7</span><strong class="text-info vertical-align-bottom margin-left-4">Vendor Setup</strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">8</span><strong class="text-info vertical-align-bottom margin-left-4">Inventory Setup</strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">9</span><strong class="text-info vertical-align-bottom margin-left-4">Recipe Setup</strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">10</span><strong class="text-info vertical-align-bottom margin-left-4">Menu Setup</strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">11</span><strong class="text-info vertical-align-bottom margin-left-4">Delivery Schedule</strong>
-            </li>
-        </ol>
-    </div>
-    <div class="col-lg-2">
-
+    <div class="col-lg-12">
+        <h2>Payment Profile</h2>
+        <p class="padding-top-5">
+            Message to restaurant user: Keep in mind that your first 14-days are free. The system needs at least 7- days of data and this process cannot start until your setup is complete. So the sooner you get setup, the sooner Artecsan can begin.
+        </p>
     </div>
 </div>
 
 <div class="wrapper wrapper-content  animated fadeInRight owner-profile">
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-content">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                             <h3 class="text-center">Payment Details</h3>
                             <img class="img-responsive float-right" src="img/png/accepted_cards.png"/>
                             <form id="payment-form" class="m-t">
@@ -153,34 +103,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <button type="submit" ui-sref="profile.userSetup" class="btn btn-primary block float-right m-b">Start Subscription and Begin User Setup</button>
-                                    </div>
-                                </div>
                             </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="ibox ">
-                <div class="ibox-content">
-                    <div class="tab-content">
-                        <div class="tab-pane active">
                             <div class="row">
-                                <div class="col-lg-12 text-center">
-                                    <h4>Helpful Tip</h4>
-                                    <hr/>
+                                <div class="col-xs-6 text-left">
+                                    <button class="btn btn-primary"  onclick="window.history.go(-1); return false;">&lt;&lt; Back</button>
                                 </div>
-                            </div>
-                            <div class="">
-                                <div class="full-height-scroll" full-scroll>
-                                    <strong>Payment Profile Instructions</strong>
-                                    <p class="padding-top-5">
-                                        Message to restaurant user: Keep in mind that your first 14-days are free. The system needs at least 7- days of data and this process cannot start until your setup is complete. So the sooner you get setup, the sooner Artecsan can begin.
-                                    </p>
+                                <div class="col-xs-6">
+                                    <button type="submit" ui-sref="food.agreement" class="btn btn-primary block float-right m-b">Next</button>
                                 </div>
                             </div>
                         </div>

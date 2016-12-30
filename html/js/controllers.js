@@ -6,8 +6,10 @@
  */
 function MainCtrl($http, $uibModal, $scope) {
     this.posIndex = 2;
-    this.isRestaurantSelected = false;
-    this.changeFirstDashboaed = false;
+    this.isRegistration = false;
+    this.isFoodSetup = false;
+    this.isTrue = true;
+
     this.usersList = [{
         firstName: 'firstName',
         lastName:'lastName',
@@ -237,8 +239,8 @@ function MainCtrl($http, $uibModal, $scope) {
 
     this.logout = function(){
         this.posIndex = 2;
-        this.isRestaurantSelected = false;
-        this.changeFirstDashboaed = false;
+        this.isRegistration = false;
+        this.isFoodSetup = false;
     };
 
     this.reset = function(){

@@ -16,18 +16,18 @@ $(document).ready(function () {
         var wrapperHeigh = $('#page-wrapper').height();
 
         if(navbarHeigh > wrapperHeigh){
-            $('#page-wrapper').css("min-height", navbarHeigh + "px");
+            $('#page-wrapper').css("min-height", navbarHeigh -61 + "px");
         }
 
         if(navbarHeigh < wrapperHeigh){
-            $('#page-wrapper').css("min-height", $(window).height()  + "px");
+            $('#page-wrapper').css("min-height", $(window).height() -61  + "px");
         }
 
         if ($('body').hasClass('fixed-nav')) {
             if (navbarHeigh > wrapperHeigh) {
-                $('#page-wrapper').css("min-height", navbarHeigh + "px");
+                $('#page-wrapper').css("min-height", navbarHeigh -61 + "px");
             } else {
-                $('#page-wrapper').css("min-height", $(window).height() - 60 + "px");
+                $('#page-wrapper').css("min-height", $(window).height() - 60 -61 + "px");
             }
         }
 

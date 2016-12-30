@@ -1,68 +1,6 @@
 <div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2>8. Inventory Setup</h2>
-        <ol class="breadcrumb">
-            <li>
-                <span class="badge badge-primary vertical-align-bottom">1</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="admin.pos">POS selection</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">2</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="admin.posDetails">Account Level</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">3</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="profile.setupProfile">Owner Profile</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">4</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="profile.restaurantProfile">Restaurant Profile</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">5</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="profile.paymentProfile">Payment Profile</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">6</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="profile.userSetup">User Setup</a>
-                </strong>
-            </li>
-        </ol>
-        <br>
-        <ol class="breadcrumb">
-            <li class="active">
-                <span class="badge badge-primary vertical-align-bottom">7</span>
-                <strong class="text-green vertical-align-bottom margin-left-4">
-                    <a ui-sref="food.vendorSetup">Vendor Setup</a>
-                </strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">8</span><strong class="text-info vertical-align-bottom active-breadcrumb margin-left-4">Inventory Setup</strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">9</span><strong class="text-info vertical-align-bottom margin-left-4">Recipe Setup</strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">10</span><strong class="text-info vertical-align-bottom margin-left-4">Menu Setup</strong>
-            </li>
-            <li class="active">
-                <span class="badge badge-info vertical-align-bottom">11</span><strong class="text-info vertical-align-bottom margin-left-4">Delivery Schedule</strong>
-            </li>
-        </ol>
-    </div>
-    <div class="col-lg-2">
-
+    <div class="col-lg-12">
+        <h2>Inventory Setup</h2>
     </div>
 </div>
 
@@ -77,12 +15,28 @@
                                 <h3 class="text-center">Inventory</h3>
                             </div>
                             <div class="row">
-                                <div>
-                                    <select class="form-control inventor-select margin-0-auto">
-                                        <option value="Vendor1">Vendor1</option>
-                                        <option value="Vendor2">Vendor2</option>
-                                        <option value="Vendor3">Vendor3</option>
-                                    </select>
+                                <div class="col-xs-12" ng-if="!main.isSecondVendor">
+                                    <ol class="breadcrumb">
+                                        <li class="active">
+                                            <span class="badge badge-info vertical-align-bottom">1</span><strong class="text-info vertical-align-bottom active-breadcrumb margin-left-4">Vendor 1</strong>
+                                        </li>
+                                        <li class="active">
+                                            <span class="badge badge-info vertical-align-bottom">2</span><strong class="text-info vertical-align-bottom margin-left-4">Vendor 2</strong>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="col-xs-12" ng-if="main.isSecondVendor">
+                                    <ol class="breadcrumb">
+                                        <li class="active">
+                                            <span class="badge badge-primary vertical-align-bottom">1</span>
+                                            <strong class="text-green vertical-align-bottom margin-left-4">
+                                                Vendor1
+                                            </strong>
+                                        </li>
+                                        <li class="active">
+                                            <span class="badge badge-info vertical-align-bottom">2</span><strong class="text-info vertical-align-bottom active-breadcrumb margin-left-4">Vendor 2</strong>
+                                        </li>
+                                    </ol>
                                 </div>
                             </div>
                             <div class="row padding-top-20">
@@ -102,7 +56,8 @@
                             </div>
                         </div>
                     </div>
-                    <table class="footable table table-stripped" data-page-size="8">
+                    <div class="table-responsive">
+                        <table class="footable table table-stripped" data-page-size="8">
                         <thead>
                         <tr>
                             <th>Inventory Name</th>
@@ -171,11 +126,24 @@
                         </tr>
                         </tfoot>
                     </table>
+                    </div>
+
+
                     <div class="row">
-                        <div class="col-lg-12">
-                            <button type="submit" class="btn btn-primary block m-b float-right" ui-sref="food.recipeSetup">Recipe Setup</button>
+                        <div class="col-xs-6 text-left" ng-if="!main.isSecondVendor">
+                            <button class="btn btn-primary"  onclick="window.history.go(-1); return false;">&lt;&lt; Back</button>
+                        </div>
+                        <div class="col-xs-6" ng-if="!main.isSecondVendor">
+                            <button type="submit" class="btn btn-primary block m-b float-right" ng-click="main.isSecondVendor = true">Next</button>
+                        </div>
+                        <div class="col-xs-6 text-left" ng-if="main.isSecondVendor">
+                            <button class="btn btn-primary" ng-click="main.isSecondVendor = false">&lt;&lt; Back</button>
+                        </div>
+                        <div class="col-xs-6" ng-if="main.isSecondVendor">
+                            <button type="submit" class="btn btn-primary block m-b float-right" ui-sref="food.recipeSetup">Next - Recipe Setup</button>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -1,34 +1,65 @@
 <nav class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
         <ul side-navigation class="nav metismenu" id="side-menu">
-           <!-- <li class="nav-header">
-
-            </li>-->
-            <li ui-sref-active="active">
-                <a ui-sref="home.home"><i class="fa fa-diamond"></i> <span class="nav-label">{{ 'Home' | translate }}</span> </a>
+            <li ng-class="{active: $state.includes('food')}" ng-if="main.isFoodSetup">
+                <a href=""><i class="fa fa-shopping-cart"></i> <span class="nav-label">{{ 'Food Setup' | translate }}</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('food')}">
+                    <li ui-sref-active="active"><a ui-sref="food.vendorSetup">Vendor Setup</a></li>
+                    <li ui-sref-active="active"><a ui-sref="food.inventorySetup">Inventory Setup</a></li>
+                    <li ui-sref-active="active"><a ui-sref="food.recipeSetup">Recipe Setup</a></li>
+                    <li ui-sref-active="active"><a ui-sref="food.menuSetup">Menu Setup</a></li>
+                    <li ui-sref-active="active"><a ui-sref="food.deliverySetup">Delivery Schedule</a></li>
+                </ul>
             </li>
-            <li ui-sref-active="active">
+
+            <li ui-sref-active="active" ng-if="main.isFoodSetup">
+                <a ui-sref="admin.comingSoon"><i class="fa fa-glass"></i> <span class="nav-label">{{ 'Bar Setup' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isFoodSetup">
+                <a ui-sref="admin.comingSoon"><i class="fa fa-table"></i> <span class="nav-label">{{ 'POS Sync' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isFoodSetup">
+                <a ui-sref="admin.comingSoon"><i class="fa fa-money"></i> <span class="nav-label">{{ 'Payroll' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isFoodSetup">
+                <a ui-sref="admin.comingSoon"><i class="fa fa-calculator"></i> <span class="nav-label">{{ 'Accounting' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="main.isFoodSetup">
+                <a ui-sref="admin.comingSoon"><i class="fa fa-users"></i> <span class="nav-label">{{ 'Users' | translate }}</span> </a>
+            </li>
+            <hr ng-if="main.isFoodSetup">
+
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
+                <a ui-sref="home.home"><i class="fa fa-home"></i> <span class="nav-label">{{ 'Select Restaurant' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
+                <a ui-sref="admin.homeMenu"><i class="fa fa-diamond"></i> <span class="nav-label">{{ 'Home' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
                 <a ui-sref="admin.managementCategories"><i class="fa fa-edit"></i> <span class="nav-label">{{ 'Management' | translate }}</span> </a>
             </li>
-            <li ui-sref-active="active">
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
+                <a ui-sref="admin.pos"><i class="fa fa-folder-o"></i> <span class="nav-label">{{ 'Setup Process' | translate }}</span> </a>
+            </li>
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
                 <a ui-sref="admin.inventoryCategories"><i class="fa fa-desktop"></i> <span class="nav-label">{{ 'Inventory' | translate }}</span> </a>
             </li>
-            <li ui-sref-active="active">
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
                 <a ui-sref="admin.comingSoon"><i class="fa fa-envelope"></i> <span class="nav-label">{{ 'Consumer Reviews' | translate }}</span> </a>
             </li>
-            <li ui-sref-active="active">
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
                 <a ui-sref="food.performanceScore"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">{{ 'Performance Score' | translate }}</span> </a>
             </li>
-            <li ui-sref-active="active">
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
                 <a ui-sref="admin.dashboardSubCategories"><i class="fa fa-pie-chart"></i> <span class="nav-label">{{ 'Reports' | translate }}</span> </a>
             </li>
-            <li ui-sref-active="active">
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
                 <a ui-sref="admin.administrator"><i class="fa fa-globe"></i> <span class="nav-label">{{ 'Administrator' | translate }}</span> </a>
             </li>
-            <li ui-sref-active="active">
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
                 <a ui-sref="admin.comingSoon"><i class="fa fa-flask"></i> <span class="nav-label">{{ 'Frequent Q&A' | translate }}</span> </a>
             </li>
-            <li ui-sref-active="active">
+            <li ui-sref-active="active" ng-if="!main.isRegistration">
                 <a ui-sref="logins"><i class="fa fa-sign-out" ng-click="main.logout()"></i> <span class="nav-label">{{ 'Logout' | translate }}</span> </a>
             </li>
         </ul>
