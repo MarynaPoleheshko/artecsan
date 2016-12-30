@@ -376,7 +376,7 @@ body.login-page {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .menu-button-xs {
         display: none;
     }
@@ -427,4 +427,17 @@ body.login-page {
 
 .th-vertical-align-middle th{
     vertical-align: middle!important;
+}
+
+.select-category{
+    padding-top: 8px;
+    padding-right: 10px;
+}
+
+.width-140{
+    width:140px;
+}
+
+.table-responsive{
+    -webkit-overflow-scrolling: touch;
 }

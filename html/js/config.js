@@ -199,6 +199,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             templateUrl: "views/inventorySetup.html",
             data: { pageTitle: 'Inventory Setup'}
         })
+        .state('food.foodInventory', {
+            url: "/food_inventory",
+            templateUrl: "views/foodInventory.html",
+            data: { pageTitle: 'Food Inventory'}
+        })
         .state('food.recipeSetup', {
             url: "/recipe_setup",
             templateUrl: "views/recipeSetup.html",

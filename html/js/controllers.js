@@ -9,6 +9,36 @@ function MainCtrl($http, $uibModal, $scope) {
     this.isRegistration = false;
     this.isFoodSetup = false;
     this.isTrue = true;
+    this.type = {
+        value:1,
+        name :'MEAT & POULTRY'
+    };
+
+    this.types = [{
+        value:1,
+        name :'MEAT & POULTRY'
+    },{
+            value:2,
+            name:'SEAFOOD'
+        },
+            {
+                value:3,
+                name:'PRODUCE'
+            },
+            {
+                value:4,
+                name:'VEGETABLES'
+            },
+            {
+                value:5,
+                name:'BREAD'
+            },
+            {
+                value:6,
+                name:'FRUIT'
+            }
+
+    ]
 
     this.usersList = [{
         firstName: 'firstName',
