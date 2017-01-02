@@ -441,3 +441,15 @@ body.login-page {
 .table-responsive{
     -webkit-overflow-scrolling: touch;
 }
+
+.navigation-hide{
+    margin:0!important;
+}
+
+.width-210{
+    width:210px;
+}
+
+.width-120{
+    width:120px;
+}

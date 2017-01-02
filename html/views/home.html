@@ -9,9 +9,15 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-content">
                     <div class="row">
-                        <div class="col-xs-5"> <input type="text" class="form-control input-sm m-b-xs" id="filter"
-                                                      placeholder="Restaurant Name"></div>
-                        <div class="col-xs-7 text-right"><button class="btn btn-primary">Search</button></div>
+                        <div class="col-md-5 padding-top-5">
+                            <input type="text" class="form-control" id="filter" placeholder="Restaurant Name">
+                        </div>
+                        <div class="col-md-2 padding-top-5">
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                        <div class="col-md-5 text-right padding-top-5">
+                            <button class="btn btn-primary" ui-sref="admin.pos">Add new Restaurant</button>
+                        </div>
                     </div>
                     <div class="table-responsive">
                         <table class="footable table table-stripped" data-page-size="8">
@@ -20,7 +26,7 @@
                             <th>#</th>
                             <th>Restaurant Name</th>
                             <th>Address</th>
-                            <th data-sort-ignore="true" class="center width-80">Action</th>
+                            <th data-sort-ignore="true" class="center width-210">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -28,55 +34,82 @@
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
                         <tr class="gradeC">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
                         <tr class="gradeX">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
                         <tr class="gradeC">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
                         <tr class="gradeX">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
                         <tr class="gradeC">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
                         <tr class="gradeX">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
                         <tr class="gradeC">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
                         <tr class="gradeX">
                             <td>45665</td>
                             <td>Chilis</td>
                             <td>Restaurant Address 123</td>
-                            <td class="center"><button class="btn btn-primary"  ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button></td>
+                            <td class="center">
+                                <button class="btn btn-primary" ui-sref="admin.homeMenu" ng-click="main.selectRestaurant()">Select</button>
+                                <button class="btn btn-primary" ui-sref="admin.pos">Setup Process</button>
+                            </td>
                         </tr>
 
                         </tbody>
